@@ -1,1 +1,25 @@
 buildPack: maven
+pipelineConfig:
+  pipelines:
+    release:
+      pipeline:
+        options:
+          containerOptions:
+            resources:
+              limits:
+                cpu: '1'
+                memory: 2Gi
+              requests:
+                cpu: 400m
+                memory: 512Mi
+    pullRequest:
+      pipeline:
+        options:
+          containerOptions:
+            resources:
+              limits:
+                cpu: '1'
+                memory: 2Gi
+              requests:
+                cpu: 400m
+                memory: 512Mi
