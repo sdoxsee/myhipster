@@ -4,6 +4,7 @@ pipelineConfig:
     overrides:
       - pipeline: release
         stage: build
+        name: build-mvn-deploy
         containerOptions:
           resources:
             limits:
