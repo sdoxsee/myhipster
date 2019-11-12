@@ -1,0 +1,2111 @@
+
+Showing logs for build [32msdoxsee-myhipster-master-bn4t8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-9s76j[0m
+{"level":"warn","ts":1573584718.1821804,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573584718.183394,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msdoxsee-myhipster-master-bn4t8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-x4wqb[0m
+{"level":"warn","ts":1573584719.1231458,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1573584719.1261742,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32msdoxsee-myhipster-master-bn4t8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msdoxsee-myhipster-master-bn4t8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sdoxsee-myhipster-master-9hvwd[0m
+{"level":"warn","ts":1573584729.2740097,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1573584729.7355664,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*******/myhipster.git @ v0.0.7 in path /workspace/source"}
+
+Showing logs for build [32msdoxsee-myhipster-master-bn4t8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:1a69766d5e3c538cb41996f324c46f6f15ed8075
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msdoxsee-myhipster-master-bn4t8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msdoxsee-myhipster-master-bn4t8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< ca.simplestep:myhipster >-----------------------
+[INFO] Building Myhipster 0.0.7
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ myhipster ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:copy-resources (default-resources) @ myhipster ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 15 resources
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ myhipster ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 15 resources
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (enforce-versions) @ myhipster ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (enforce-dependencyConvergence) @ myhipster ---
+[WARNING] 
+Dependency convergence error for org.apiguardian:apiguardian-api:1.0.0 paths to dependency are:
++-ca.simplestep:myhipster:0.0.7
+  +-org.junit.jupiter:junit-jupiter-engine:5.3.2
+    +-org.apiguardian:apiguardian-api:1.0.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.junit.jupiter:junit-jupiter-engine:5.3.2
+    +-org.junit.platform:junit-platform-engine:1.3.2
+      +-org.apiguardian:apiguardian-api:1.0.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.junit.jupiter:junit-jupiter-engine:5.3.2
+    +-org.junit.platform:junit-platform-engine:1.3.2
+      +-org.junit.platform:junit-platform-commons:1.3.2
+        +-org.apiguardian:apiguardian-api:1.0.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.junit.jupiter:junit-jupiter-engine:5.3.2
+    +-org.junit.jupiter:junit-jupiter-api:5.3.2
+      +-org.apiguardian:apiguardian-api:1.0.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.zalando:problem-spring-web:0.25.0
+    +-org.zalando:problem-violations:0.25.0
+      +-org.apiguardian:apiguardian-api:1.0.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.zalando:problem-spring-web:0.25.0
+    +-org.zalando:problem-spring-common:0.25.0
+      +-org.apiguardian:apiguardian-api:1.1.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.zalando:problem-spring-web:0.25.0
+    +-org.apiguardian:apiguardian-api:1.1.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.zalando:problem-spring-web:0.25.0
+    +-org.zalando:problem:0.23.0
+      +-org.apiguardian:apiguardian-api:1.0.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.zalando:problem-spring-web:0.25.0
+    +-org.zalando:jackson-datatype-problem:0.23.0
+      +-org.apiguardian:apiguardian-api:1.0.0
+and
++-ca.simplestep:myhipster:0.0.7
+  +-org.zalando:problem-spring-web:0.25.0
+    +-org.zalando:faux-pas:0.8.0
+      +-org.apiguardian:apiguardian-api:1.0.0
+
+[WARNING] Rule 0: org.apache.maven.plugins.enforcer.DependencyConvergence failed with message:
+Failed while enforcing releasability. See above detailed error message.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.4:prepare-agent (pre-unit-tests) @ myhipster ---
+[INFO] argLine set to -javaagent:/home/jenkins/.mvnrepository/org/jacoco/org.jacoco.agent/0.8.4/org.jacoco.agent-0.8.4-runtime.jar=destfile=/workspace/source/target/jacoco/test/test.exec -Djava.security.egd=file:/dev/./urandom -Xmx256m
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0.0:read-project-properties (default) @ myhipster ---
+[INFO] 
+[INFO] --- frontend-maven-plugin:1.8.0:install-node-and-npm (install node and npm) @ myhipster ---
+[INFO] Installing node version v10.16.3
+[INFO] Downloading https://nodejs.org/dist/v10.16.3/node-v10.16.3-linux-x64.tar.gz to /home/jenkins/.mvnrepository/com/github/eirslett/node/10.16.3/node-10.16.3-linux-x64.tar.gz
+[INFO] No proxies configured
+[INFO] No proxy was configured, downloading directly
+[INFO] Unpacking /home/jenkins/.mvnrepository/com/github/eirslett/node/10.16.3/node-10.16.3-linux-x64.tar.gz into /workspace/source/node/tmp
+[INFO] Copying node binary from /workspace/source/node/tmp/node-v10.16.3-linux-x64/bin/node to /workspace/source/node/node
+[INFO] Installed node locally.
+[INFO] Installing npm version 6.11.3
+[INFO] Downloading https://registry.npmjs.org/npm/-/npm-6.11.3.tgz to /home/jenkins/.mvnrepository/com/github/eirslett/npm/6.11.3/npm-6.11.3.tar.gz
+[INFO] No proxies configured
+[INFO] No proxy was configured, downloading directly
+[INFO] Unpacking /home/jenkins/.mvnrepository/com/github/eirslett/npm/6.11.3/npm-6.11.3.tar.gz into /workspace/source/node/node_modules
+[INFO] Installed npm locally.
+[INFO] 
+[INFO] --- frontend-maven-plugin:1.8.0:npm (npm install) @ myhipster ---
+[INFO] Running 'npm install' in /workspace/source
+[INFO] 
+[INFO] > husky@3.0.4 install /workspace/source/node_modules/husky
+[INFO] > node husky install
+[INFO] 
+[INFO] husky > Setting up git hooks
+[INFO] CI detected, skipping Git hooks installation.
+[INFO] husky > Done
+[INFO] 
+[INFO] > core-js@2.6.10 postinstall /workspace/source/node_modules/babel-runtime/node_modules/core-js
+[INFO] > node postinstall || echo "ignore"
+[INFO] 
+[INFO] Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+[INFO] 
+[INFO] The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+[INFO] > https://opencollective.com/core-js 
+[INFO] > https://www.patreon.com/zloirock 
+[INFO] 
+[INFO] Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+[INFO] 
+[INFO] 
+[INFO] > core-js@3.4.0 postinstall /workspace/source/node_modules/global-agent/node_modules/core-js
+[INFO] > node postinstall || echo "ignore"
+[INFO] 
+[INFO] Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+[INFO] 
+[INFO] The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+[INFO] > https://opencollective.com/core-js 
+[INFO] > https://www.patreon.com/zloirock 
+[INFO] 
+[INFO] Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+[INFO] 
+[INFO] 
+[INFO] > spawn-sync@1.0.15 postinstall /workspace/source/node_modules/spawn-sync
+[INFO] > node postinstall
+[INFO] 
+[INFO] 
+[INFO] > yo@3.1.0 postinstall /workspace/source/node_modules/yo
+[INFO] > yodoctor
+[INFO] 
+[INFO] 
+[INFO] Yeoman Doctor
+[INFO] Running sanity checks on your system
+[INFO] 
+[INFO] ✔ No .bowerrc file in home directory
+[INFO] ✔ Global configuration file is valid
+[INFO] ✔ NODE_PATH matches the npm root
+[INFO] ✔ No .yo-rc.json file in home directory
+[INFO] ✔ Node.js version
+[INFO] ✔ npm version
+[INFO] ✔ yo version
+[INFO] 
+[INFO] Everything looks all right!
+[INFO] 
+[INFO] > @angular/cli@8.3.1 postinstall /workspace/source/node_modules/@angular/cli
+[INFO] > node ./bin/postinstall/script.js
+[INFO] 
+[INFO] 
+[INFO] > core-js@3.2.1 postinstall /workspace/source/node_modules/core-js
+[INFO] > node scripts/postinstall || echo "ignore"
+[INFO] 
+[INFO] Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+[INFO] 
+[INFO] The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
+[INFO] > https://opencollective.com/core-js 
+[INFO] > https://www.patreon.com/zloirock 
+[INFO] 
+[INFO] Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+[INFO] 
+[INFO] 
+[INFO] > husky@3.0.4 postinstall /workspace/source/node_modules/husky
+[INFO] > opencollective-postinstall || true
+[INFO] 
+[INFO] Thank you for using husky!
+[INFO] If you rely on this package, please consider supporting our open collective:
+[INFO] > https://opencollective.com/husky/donate
+[INFO] 
+[INFO] 
+[INFO] > ngx-infinite-scroll@8.0.0 postinstall /workspace/source/node_modules/ngx-infinite-scroll
+[INFO] > opencollective-postinstall
+[INFO] 
+[INFO] Thank you for using ngx-infinite-scroll!
+[INFO] If you rely on this package, please consider supporting our open collective:
+[INFO] > https://opencollective.com/ngx-infinite-scroll/donate
+[INFO] 
+[INFO] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules/fsevents):
+[INFO] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[INFO] 
+[INFO] added 2213 packages from 1050 contributors and audited 909582 packages in 88.872s
+[INFO] found 3 moderate severity vulnerabilities
+[INFO]   run `npm audit fix` to fix them, or `npm audit` for details
+[INFO] 
+[INFO] --- frontend-maven-plugin:1.8.0:npm (webpack build dev) @ myhipster ---
+[INFO] npm not inheriting proxy config from Maven
+[INFO] Running 'npm run webpack:build' in /workspace/source
+[INFO] 
+[INFO] > myhipster@0.0.1-SNAPSHOT webpack:build /workspace/source
+[INFO] > npm run cleanup && npm run webpack:build:main
+[INFO] 
+[INFO] 
+[INFO] > myhipster@0.0.1-SNAPSHOT cleanup /workspace/source
+[INFO] > rimraf target/classes/static/ target/classes/aot
+[INFO] 
+[INFO] 
+[INFO] > myhipster@0.0.1-SNAPSHOT webpack:build:main /workspace/source
+[INFO] > npm run webpack -- --config webpack/webpack.dev.js --env.stats=minimal
+[INFO] 
+[INFO] 
+[INFO] > myhipster@0.0.1-SNAPSHOT webpack /workspace/source
+[INFO] > node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js "--config" "webpack/webpack.dev.js" "--env.stats=minimal"
+[INFO] 
+[INFO] Webpack: Starting ...
+[INFO] Starting type checking service...
+[INFO] Using 1 worker with 2048MB memory limit
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ❯ Compile modules
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 0 of 0 modules :: 
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 0 of 0 modules :: 
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 0 of 0 modules :: 
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 0 of 1 modules :: src/main/webapp/content/scss/global.scss ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 1 of 1 modules :: 
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 1 of 2 modules :: src/main/webapp/content/scss/global.scss ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 1 of 3 modules :: src/main/webapp/app/polyfills.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 1 of 4 modules :: src/main/webapp/app/app.main.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 1 of 5 modules :: node_modules/style-loader/dist/runtime/injectStylesInto
+[INFO] StyleTag.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (0%)
+[INFO]      → 2 of 5 modules :: src/main/webapp/app/app.main.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (1%)
+[INFO]      → 3 of 5 modules :: src/main/webapp/app/app.main.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (1%)
+[INFO]      → 3 of 6 modules :: node_modules/css-loader/dist/runtime/api.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (1%)
+[INFO]      → 4 of 6 modules :: src/main/webapp/app/app.main.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 4 of 6 modules :: src/main/webapp/app/app.main.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 5 of 6 modules :: src/main/webapp/app/app.main.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 5 of 7 modules :: node_modules/zone.js/dist/zone.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 5 of 8 modules :: node_modules/core-js/proposals/reflect-metadata.js ~ ex
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 8 modules :: node_modules/zone.js/dist/zone.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 9 modules :: src/main/webapp/manifest.webapp ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 10 modules :: node_modules/core-js/modules/esnext.reflect.define-met
+[INFO] adata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 11 modules :: node_modules/core-js/modules/esnext.reflect.get-metada
+[INFO] ta.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 12 modules :: node_modules/core-js/modules/esnext.reflect.get-metada
+[INFO] ta-keys.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 13 modules :: node_modules/core-js/modules/esnext.reflect.get-own-me
+[INFO] tadata-keys.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 14 modules :: node_modules/core-js/modules/esnext.reflect.get-own-me
+[INFO] tadata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 15 modules :: node_modules/core-js/modules/esnext.reflect.metadata.j
+[INFO] s ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 16 modules :: node_modules/core-js/modules/esnext.reflect.delete-met
+[INFO] adata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 17 modules :: node_modules/core-js/modules/esnext.reflect.has-own-me
+[INFO] tadata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 6 of 18 modules :: node_modules/core-js/modules/esnext.reflect.has-metada
+[INFO] ta.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 7 of 18 modules :: node_modules/core-js/modules/esnext.reflect.has-metada
+[INFO] ta.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 8 of 18 modules :: node_modules/core-js/modules/esnext.reflect.has-metada
+[INFO] ta.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 9 of 18 modules :: node_modules/core-js/modules/esnext.reflect.has-metada
+[INFO] ta.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 10 of 18 modules :: node_modules/core-js/modules/esnext.reflect.has-metad
+[INFO] ata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 11 of 18 modules :: node_modules/core-js/modules/esnext.reflect.has-metad
+[INFO] ata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 12 of 18 modules :: node_modules/core-js/modules/esnext.reflect.has-metad
+[INFO] ata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 13 of 18 modules :: node_modules/core-js/modules/esnext.reflect.has-metad
+[INFO] ata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 14 of 18 modules :: node_modules/core-js/modules/esnext.reflect.delete-me
+[INFO] tadata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 15 of 18 modules :: node_modules/core-js/modules/esnext.reflect.delete-me
+[INFO] tadata.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 16 of 18 modules :: node_modules/zone.js/dist/zone.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 16 of 19 modules :: node_modules/core-js/modules/es.set.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 16 of 20 modules :: node_modules/core-js/internals/export.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 16 of 21 modules :: node_modules/core-js/internals/object-get-prototype-o
+[INFO] f.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 16 of 22 modules :: node_modules/core-js/internals/reflect-metadata.js ~ 
+[INFO] external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 16 of 23 modules :: node_modules/core-js/internals/an-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 16 of 24 modules :: node_modules/core-js/internals/iterate.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 17 of 24 modules :: node_modules/core-js/internals/iterate.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 17 of 25 modules :: node_modules/webpack/buildin/global.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 18 of 25 modules :: node_modules/core-js/internals/iterate.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 19 of 25 modules :: node_modules/core-js/internals/iterate.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 20 of 25 modules :: node_modules/core-js/internals/iterate.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 21 of 25 modules :: node_modules/core-js/internals/iterate.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 22 of 25 modules :: node_modules/core-js/internals/iterate.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 23 of 25 modules :: node_modules/core-js/internals/an-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 24 of 25 modules :: node_modules/core-js/internals/an-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 25 modules :: 
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 26 modules :: src/main/webapp/app/app.module.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 27 modules :: node_modules/core-js/internals/collection.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 28 modules :: node_modules/core-js/internals/collection-strong.js ~
+[INFO]  external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 29 modules :: node_modules/core-js/internals/global.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 30 modules :: node_modules/core-js/internals/object-get-own-propert
+[INFO] y-descriptor.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 31 modules :: node_modules/core-js/internals/hide.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 32 modules :: node_modules/core-js/internals/redefine.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 33 modules :: node_modules/core-js/internals/set-global.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 34 modules :: node_modules/core-js/internals/copy-constructor-prope
+[INFO] rties.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 35 modules :: node_modules/core-js/internals/is-forced.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 36 modules :: node_modules/core-js/internals/has.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 37 modules :: node_modules/core-js/internals/to-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 38 modules :: node_modules/core-js/internals/shared-key.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 39 modules :: node_modules/core-js/internals/correct-prototype-gett
+[INFO] er.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 40 modules :: node_modules/core-js/modules/es.map.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 41 modules :: node_modules/core-js/modules/es.weak-map.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 42 modules :: node_modules/core-js/internals/shared.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 43 modules :: node_modules/core-js/internals/is-array-iterator-meth
+[INFO] od.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 44 modules :: node_modules/core-js/internals/to-length.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 45 modules :: node_modules/core-js/internals/bind-context.js ~ exte
+[INFO] rnal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 46 modules :: node_modules/core-js/internals/get-iterator-method.js
+[INFO]  ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 47 modules :: node_modules/core-js/internals/call-with-safe-iterati
+[INFO] on-closing.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 48 modules :: src/main/webapp/app/blocks/config/prod.config.ts ~ in
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 25 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 26 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 27 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 28 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 29 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 30 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 31 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 32 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 33 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 34 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 35 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 36 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 37 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 38 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 39 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 40 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 41 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 42 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 43 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 44 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 45 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 46 of 49 modules :: node_modules/core-js/internals/is-object.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 49 modules :: src/main/webapp/app/blocks/config/prod.config.ts ~ in
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 50 modules :: 
+[INFO] node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic
+[INFO] .js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 51 modules :: node_modules/core-js/internals/internal-metadata.js ~
+[INFO]  external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 52 modules :: node_modules/core-js/internals/an-instance.js ~ exter
+[INFO] nal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 53 modules :: node_modules/core-js/internals/fails.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 54 modules :: node_modules/core-js/internals/check-correctness-of-i
+[INFO] teration.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 55 modules :: node_modules/core-js/internals/set-to-string-tag.js ~
+[INFO]  external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 56 modules :: node_modules/core-js/internals/inherit-if-required.js
+[INFO]  ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 57 modules :: node_modules/core-js/internals/object-define-property
+[INFO] .js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 58 modules :: node_modules/core-js/internals/object-create.js ~ ext
+[INFO] ernal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 59 modules :: node_modules/core-js/internals/redefine-all.js ~ exte
+[INFO] rnal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 60 modules :: node_modules/core-js/internals/define-iterator.js ~ e
+[INFO] xternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 61 modules :: node_modules/core-js/internals/set-species.js ~ exter
+[INFO] nal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 62 modules :: node_modules/core-js/internals/descriptors.js ~ exter
+[INFO] nal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 63 modules :: node_modules/core-js/internals/internal-state.js ~ ex
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 64 modules :: node_modules/core-js/internals/object-property-is-enu
+[INFO] merable.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 65 modules :: node_modules/core-js/internals/create-property-descri
+[INFO] ptor.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 66 modules :: node_modules/core-js/internals/to-indexed-object.js ~
+[INFO]  external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 67 modules :: node_modules/core-js/internals/to-primitive.js ~ exte
+[INFO] rnal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 68 modules :: node_modules/core-js/internals/ie8-dom-define.js ~ ex
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 69 modules :: node_modules/core-js/internals/own-keys.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 70 modules :: node_modules/core-js/internals/function-to-string.js 
+[INFO] ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 71 modules :: node_modules/core-js/internals/uid.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 72 modules :: node_modules/core-js/internals/require-object-coercib
+[INFO] le.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 73 modules :: node_modules/core-js/internals/is-pure.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 74 modules :: node_modules/core-js/internals/collection-weak.js ~ e
+[INFO] xternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 75 modules :: node_modules/core-js/internals/native-weak-map.js ~ e
+[INFO] xternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 76 modules :: node_modules/core-js/internals/well-known-symbol.js ~
+[INFO]  external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 77 modules :: node_modules/core-js/internals/iterators.js ~ externa
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 78 modules :: node_modules/core-js/internals/classof.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 79 modules :: node_modules/core-js/internals/to-integer.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 47 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 48 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 49 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 50 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 51 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 52 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 53 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 54 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 55 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 56 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 57 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 58 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 59 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 60 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 61 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 62 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 63 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 64 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 65 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 66 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 67 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 68 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 69 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 70 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 71 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 72 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 73 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 74 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 75 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 76 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 77 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 78 of 80 modules :: node_modules/core-js/internals/a-function.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 79 of 80 modules :: src/main/webapp/app/blocks/config/prod.config.ts ~ in
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 80 modules :: 
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 81 modules :: src/main/webapp/app/vendor.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 82 modules :: src/main/webapp/app/app-routing.module.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 83 modules :: src/main/webapp/app/home/home.module.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 84 modules :: src/main/webapp/app/entities/entity.module.ts ~ inter
+[INFO] nal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 85 modules :: src/main/webapp/app/shared/shared.module.ts ~ interna
+[INFO] l
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 86 modules :: src/main/webapp/app/core/core.module.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 87 modules :: node_modules/core-js/internals/hidden-keys.js ~ exter
+[INFO] nal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 88 modules :: node_modules/core-js/internals/freezing.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 89 modules :: node_modules/core-js/internals/object-set-prototype-o
+[INFO] f.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 90 modules :: node_modules/core-js/internals/object-define-properti
+[INFO] es.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 91 modules :: node_modules/core-js/internals/enum-bug-keys.js ~ ext
+[INFO] ernal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 92 modules :: node_modules/core-js/internals/html.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 93 modules :: node_modules/core-js/internals/document-create-elemen
+[INFO] t.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 94 modules :: node_modules/core-js/internals/create-iterator-constr
+[INFO] uctor.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 95 modules :: node_modules/core-js/internals/iterators-core.js ~ ex
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 96 modules :: node_modules/core-js/internals/get-built-in.js ~ exte
+[INFO] rnal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 97 modules :: node_modules/core-js/internals/indexed-object.js ~ ex
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 98 modules :: node_modules/core-js/internals/object-get-own-propert
+[INFO] y-names.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 99 modules :: node_modules/core-js/internals/object-get-own-propert
+[INFO] y-symbols.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 100 modules :: src/main/webapp/app/layouts/main/main.component.ts ~
+[INFO]  internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 101 modules :: src/main/webapp/app/layouts/navbar/navbar.component.
+[INFO] ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 102 modules :: src/main/webapp/app/layouts/navbar/active-menu.direc
+[INFO] tive.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 103 modules :: src/main/webapp/app/layouts/footer/footer.component.
+[INFO] ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 104 modules :: src/main/webapp/app/layouts/profiles/page-ribbon.com
+[INFO] ponent.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 105 modules :: src/main/webapp/app/layouts/error/error.component.ts
+[INFO]  ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 106 modules :: node_modules/core-js/internals/array-iteration.js ~ 
+[INFO] external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 107 modules :: node_modules/core-js/internals/native-symbol.js ~ ex
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 108 modules :: node_modules/core-js/internals/classof-raw.js ~ exte
+[INFO] rnal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 80 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 81 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 82 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 83 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 84 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 85 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 86 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 87 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 88 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 89 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 90 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 91 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 92 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 93 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 94 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 95 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 96 of 109 modules :: src/main/webapp/app/app.constants.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 96 of 110 modules :: node_modules/@angular/common/fesm2015/common.js ~ ex
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 96 of 111 modules :: node_modules/@angular/compiler/fesm2015/compiler.js 
+[INFO] ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 96 of 112 modules :: node_modules/@angular/core/fesm2015/core.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 96 of 113 modules :: node_modules/@angular/platform-browser/fesm2015/plat
+[INFO] form-browser.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 96 of 114 modules :: node_modules/tslib/tslib.es6.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 97 of 114 modules :: node_modules/tslib/tslib.es6.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 98 of 114 modules :: node_modules/tslib/tslib.es6.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 98 of 115 modules :: node_modules/core-js/internals/a-possible-prototype.
+[INFO] js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 98 of 116 modules :: node_modules/core-js/internals/object-keys.js ~ exte
+[INFO] rnal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 99 of 116 modules :: node_modules/core-js/internals/object-keys.js ~ exte
+[INFO] rnal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 99 of 117 modules :: node_modules/core-js/internals/path.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 99 of 118 modules :: node_modules/core-js/internals/object-keys-internal.
+[INFO] js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 100 of 118 modules :: node_modules/core-js/internals/object-keys-internal
+[INFO] .js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 100 of 119 modules :: node_modules/core-js/internals/array-species-create
+[INFO] .js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 100 of 120 modules :: src/main/webapp/app/layouts/error/error.route.ts ~ 
+[INFO] internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 100 of 121 modules :: src/main/webapp/app/layouts/navbar/navbar.route.ts 
+[INFO] ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 100 of 122 modules :: src/main/webapp/content/scss/vendor.scss ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 101 of 122 modules :: src/main/webapp/app/layouts/navbar/navbar.route.ts 
+[INFO] ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 101 of 123 modules :: src/main/webapp/content/scss/vendor.scss ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 101 of 124 modules :: src/main/webapp/app/*****/*****-routing.module.ts ~
+[INFO]  internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 101 of 125 modules :: src/main/webapp/app/account/account.module.ts ~ int
+[INFO] ernal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 101 of 126 modules :: src/main/webapp/app/core/auth/user-route-access-ser
+[INFO] vice.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 102 of 126 modules :: src/main/webapp/app/core/auth/user-route-access-ser
+[INFO] vice.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 103 of 126 modules :: src/main/webapp/app/core/auth/user-route-access-ser
+[INFO] vice.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 104 of 126 modules :: src/main/webapp/app/core/auth/user-route-access-ser
+[INFO] vice.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 105 of 126 modules :: src/main/webapp/app/core/auth/user-route-access-ser
+[INFO] vice.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 106 of 126 modules :: src/main/webapp/app/core/auth/user-route-access-ser
+[INFO] vice.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 107 of 126 modules :: src/main/webapp/app/core/auth/user-route-access-ser
+[INFO] vice.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 126 modules :: src/main/webapp/app/core/auth/user-route-access-ser
+[INFO] vice.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 127 modules :: node_modules/@angular/router/fesm2015/router.js ~ e
+[INFO] xternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 128 modules :: node_modules/core-js/internals/array-includes.js ~ 
+[INFO] external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 129 modules :: node_modules/core-js/internals/is-array.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 130 modules :: src/main/webapp/app/home/home.route.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 131 modules :: src/main/webapp/app/home/home.component.ts ~ intern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 132 modules :: src/main/webapp/app/shared/shared-libs.module.ts ~ 
+[INFO] internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 133 modules :: src/main/webapp/app/shared/language/find-language-f
+[INFO] rom-key.pipe.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 134 modules :: src/main/webapp/app/shared/alert/alert.component.ts
+[INFO]  ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 135 modules :: src/main/webapp/app/shared/alert/alert-error.compon
+[INFO] ent.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 136 modules :: src/main/webapp/app/shared/login/login.component.ts
+[INFO]  ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 108 of 137 modules :: src/main/webapp/app/shared/auth/has-any-authority.d
+[INFO] irective.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 109 of 137 modules :: src/main/webapp/app/shared/auth/has-any-authority.d
+[INFO] irective.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 110 of 137 modules :: src/main/webapp/app/shared/auth/has-any-authority.d
+[INFO] irective.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 111 of 137 modules :: src/main/webapp/app/shared/auth/has-any-authority.d
+[INFO] irective.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 112 of 137 modules :: src/main/webapp/app/shared/auth/has-any-authority.d
+[INFO] irective.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 113 of 137 modules :: src/main/webapp/app/shared/auth/has-any-authority.d
+[INFO] irective.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 113 of 138 modules :: node_modules/core-js/internals/to-absolute-index.js
+[INFO]  ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 113 of 139 modules :: src/main/webapp/app/core/icons/font-awesome-icons.t
+[INFO] s ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 113 of 140 modules :: src/main/webapp/app/shared/util/datepicker-adapter.
+[INFO] ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 113 of 141 modules :: src/main/webapp/app/blocks/interceptor/auth-expired
+[INFO] .interceptor.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 113 of 142 modules :: src/main/webapp/app/blocks/interceptor/errorhandler
+[INFO] .interceptor.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 113 of 143 modules :: src/main/webapp/app/blocks/interceptor/notification
+[INFO] .interceptor.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 113 of 144 modules :: src/main/webapp/app/core/language/language.helper.t
+[INFO] s ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (33%)
+[INFO]      → 114 of 144 modules :: src/main/webapp/app/core/language/language.helper.t
+[INFO] s ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 114 of 144 modules :: src/main/webapp/app/core/language/language.helper.t
+[INFO] s ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 114 of 145 modules :: node_modules/@angular/common/locales/en.js ~ extern
+[INFO] al
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 114 of 146 modules :: node_modules/@fortawesome/free-solid-svg-icons/inde
+[INFO] x.es.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 114 of 147 modules :: node_modules/@angular/common/fesm2015/http.js ~ ext
+[INFO] ernal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 115 of 147 modules :: node_modules/@angular/common/fesm2015/http.js ~ ext
+[INFO] ernal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 115 of 148 modules :: node_modules/moment/moment.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 115 of 149 modules :: node_modules/ngx-cookie/fesm2015/ngx-cookie.js ~ ex
+[INFO] ternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 115 of 150 modules :: node_modules/@fortawesome/angular-fontawesome/fesm2
+[INFO] 015/angular-fontawesome.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 115 of 151 modules :: node_modules/@ngx-translate/core/fesm2015/ngx-trans
+[INFO] late-core.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 115 of 152 modules :: node_modules/ngx-webstorage/fesm2015/ngx-webstorage
+[INFO] .js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 115 of 153 modules :: node_modules/ng-jhipster/fesm2015/ng-jhipster.js ~ 
+[INFO] external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 116 of 153 modules :: node_modules/ng-jhipster/fesm2015/ng-jhipster.js ~ 
+[INFO] external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 116 of 154 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 116 of 155 modules :: src/main/webapp/app/layouts/main/main.component.htm
+[INFO] l ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 117 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 118 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 119 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 120 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 121 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 122 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 123 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 124 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 125 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 126 of 155 modules :: node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng
+[INFO] -bootstrap.js ~ external
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 126 of 156 modules :: src/main/webapp/app/layouts/navbar/navbar.component
+[INFO] .html ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 127 of 156 modules :: src/main/webapp/app/layouts/navbar/navbar.component
+[INFO] .html ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 127 of 157 modules :: src/main/webapp/app/layouts/footer/footer.component
+[INFO] .html ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 128 of 157 modules :: src/main/webapp/app/layouts/footer/footer.component
+[INFO] .html ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 128 of 158 modules :: src/main/webapp/app/layouts/error/error.component.h
+[INFO] tml ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 128 of 159 modules :: src/main/webapp/app/core/auth/account.service.ts ~ 
+[INFO] internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 128 of 160 modules :: src/main/webapp/app/layouts/profiles/profile.servic
+[INFO] e.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 129 of 160 modules :: src/main/webapp/app/layouts/profiles/profile.servic
+[INFO] e.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 129 of 161 modules :: src/main/webapp/app/core/login/login-modal.service.
+[INFO] ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 129 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 130 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 131 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 132 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 133 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 134 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 135 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 136 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 137 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 162 modules :: src/main/webapp/app/core/login/login.service.ts ~ i
+[INFO] nternal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 163 modules :: src/main/webapp/app/*****/user-management/user-mana
+[INFO] gement.module.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 164 modules :: src/main/webapp/app/*****/audits/audits.module.ts ~
+[INFO]  internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 165 modules :: src/main/webapp/app/*****/configuration/configurati
+[INFO] on.module.ts ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 166 modules :: src/main/webapp/app/*****/docs/docs.module.ts ~ int
+[INFO] ernal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 167 modules :: src/main/webapp/app/*****/health/health.module.ts ~
+[INFO]  internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 168 modules :: src/main/webapp/app/*****/logs/logs.module.ts ~ int
+[INFO] ernal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 169 modules :: src/main/webapp/app/*****/metrics/metrics.module.ts
+[INFO]  ~ internal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 138 of 170 modules :: src/main/webapp/app/account/account.route.ts ~ inte
+[INFO] rnal
+[INFO] [GWebpack: Starting ...
+[INFO] 
+[INFO]    ✔ Compile modules
+[INFO]    ❯ Build modules (67%)
+[INFO]      → 139 of 170 modules :: src/main/webapp/app/account/account.route.ts ~ inte
+[INFO] rnal
+[INFO] events.js:174
+[INFO]       throw er; // Unhandled 'error' event
+[INFO]       ^
+[INFO] 
+[INFO] Error: This socket has been ended by the other party
+[INFO]     at Socket.writeAfterFIN [as write] (net.js:395:12)
+[INFO]     at PoolWorker.writeJson (/workspace/source/node_modules/thread-loader/dist/WorkerPool.js:122:20)
+[INFO]     at PoolWorker.run (/workspace/source/node_modules/thread-loader/dist/WorkerPool.js:104:10)
+[INFO]     at WorkerPool.distributeJob (/workspace/source/node_modules/thread-loader/dist/WorkerPool.js:332:18)
+[INFO]     at runQueue (/workspace/source/node_modules/neo-async/async.js:8097:9)
+[INFO]     at process._tickCallback (internal/process/next_tick.js:61:11)
+[INFO] Emitted 'error' event at:
+[INFO]     at Socket.writeAfterFIN [as write] (net.js:398:8)
+[INFO]     at PoolWorker.writeJson (/workspace/source/node_modules/thread-loader/dist/WorkerPool.js:122:20)
+[INFO]     [... lines matching original stack trace ...]
+[INFO]     at process._tickCallback (internal/process/next_tick.js:61:11)
+[INFO] npm ERR! code ELIFECYCLE
+[INFO] npm ERR! errno 1
+[INFO] npm ERR! myhipster@0.0.1-SNAPSHOT webpack: `node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js "--config" "webpack/webpack.dev.js" "--env.stats=minimal"`
+[INFO] npm ERR! Exit status 1
+[INFO] npm ERR! 
+[INFO] npm ERR! Failed at the myhipster@0.0.1-SNAPSHOT webpack script.
+[INFO] npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+[INFO] 
+[INFO] npm ERR! A complete log of this run can be found in:
+[INFO] npm ERR!     /builder/home/.npm/_logs/2019-11-12T19_01_27_599Z-debug.log
+[INFO] npm ERR! code ELIFECYCLE
+[INFO] npm ERR! errno 1
+[INFO] npm ERR! myhipster@0.0.1-SNAPSHOT webpack:build:main: `npm run webpack -- --config webpack/webpack.dev.js --env.stats=minimal`
+[INFO] npm ERR! Exit status 1
+[INFO] npm ERR! 
+[INFO] npm ERR! Failed at the myhipster@0.0.1-SNAPSHOT webpack:build:main script.
+[INFO] npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+[INFO] 
+[INFO] npm ERR! A complete log of this run can be found in:
+[INFO] npm ERR!     /builder/home/.npm/_logs/2019-11-12T19_01_27_645Z-debug.log
+[INFO] npm ERR! code ELIFECYCLE
+[INFO] npm ERR! errno 1
+[INFO] npm ERR! myhipster@0.0.1-SNAPSHOT webpack:build: `npm run cleanup && npm run webpack:build:main`
+[INFO] npm ERR! Exit status 1
+[INFO] npm ERR! 
+[INFO] npm ERR! Failed at the myhipster@0.0.1-SNAPSHOT webpack:build script.
+[INFO] npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+[INFO] 
+[INFO] npm ERR! A complete log of this run can be found in:
+[INFO] npm ERR!     /builder/home/.npm/_logs/2019-11-12T19_01_27_671Z-debug.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  09:13 min
+[INFO] Finished at: 2019-11-12T19:01:27Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.github.eirslett:frontend-maven-plugin:1.8.0:npm (webpack build dev) on project myhipster: Failed to run task: 'npm run webpack:build' failed. org.apache.commons.exec.ExecuteException: Process exited with an error: 1 (Exit value: 1) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-mvn-deploy'. The execution of the pipeline has stopped.[0m
