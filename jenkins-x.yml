@@ -1,9 +1,10 @@
 buildPack: maven
-containerOptions:
-  resources:
-    limits:
-      cpu: '1'
-      memory: 2Gi
-    requests:
-      cpu: 400m
-      memory: 512Mi
+pipelineConfig:
+  containerOptions:
+    resources:
+      limits:
+        cpu: '1'
+        memory: 2Gi
+      requests:
+        cpu: 400m
+        memory: 512Mi
