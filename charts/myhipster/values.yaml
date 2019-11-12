@@ -7,8 +7,22 @@ image:
   tag: dev
   pullPolicy: IfNotPresent
 
+# https://github.com/helm/helm/issues/4490
+persistence:
+  deploy: true
+
+official-postgresql:
+  fullnameOverride: official-pg
+  postgresqlUsername: root
+  postgresqlDatabase: myhipster
+  existingSecret: postgresql-secret
+
+postgresqlSecret:
+  postgresqlPassword:
+
 # define environment variables here as a map of key: value
 env:
+  # SPRING_DATASOURCE_PASSWORD:
 
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false

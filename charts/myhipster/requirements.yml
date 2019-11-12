@@ -1,0 +1,11 @@
+dependencies:
+# - name: postgresql
+#   alias: official-postgresql
+#   repository: https://kubernetes-charts.storage.googleapis.com/
+#   version: 7.0.2
+#   condition: persistence.deploy
+- name: mysql
+  alias: official-mysql
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 7.0.2
+  condition: persistence.deploy
