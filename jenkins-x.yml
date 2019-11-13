@@ -15,3 +15,16 @@ pipelineConfig:
             limits:
               cpu: '1'
               memory: 2Gi
+      - pipeline: pullRequest
+        stage: build
+        name: mvn-install
+        steps:
+          - command: mvn -Pprod install
+            dir: /workspace/source
+            image: maven
+            name: build-mvn-install
+        containerOptions:
+          resources:
+            limits:
+              cpu: '1'
+              memory: 2Gi
