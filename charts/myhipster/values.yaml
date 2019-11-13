@@ -7,29 +7,30 @@ image:
   tag: dev
   pullPolicy: IfNotPresent
 
-# # https://github.com/helm/helm/issues/4490
-# persistence:
-#   deploy: true
+# https://github.com/helm/helm/issues/4490
+persistence:
+  deploy: true
 
-# # official-postgresql:
-# #   fullnameOverride: official-pg
-# #   postgresqlUsername: root
-# #   postgresqlDatabase: myhipster
-# #   existingSecret: postgresql-secret
+# official-postgresql:
+#   fullnameOverride: official-pg
+#   postgresqlUsername: root
+#   postgresqlDatabase: myhipster
+#   existingSecret: postgresql-secret
 
-# # postgresqlSecret:
-# #   postgresqlPassword:
+# postgresqlSecret:
+#   postgresqlPassword:
 
-# official-mysql:
-#   mysqlRootPassword:
-#   mysqlUser: myhipster
-#   mysqlPassword: myhipster
-#   mysqlDatabase: myhipster
-#   existingSecret:
+official-mysql:
+#   fullnameOverride: official-mysql
+  mysqlDatabase: myhipster
+  mysqlUser: myhipster
+  existingSecret: mysql-secret
 
 # define environment variables here as a map of key: value
 env:
-  # SPRING_DATASOURCE_PASSWORD:
+  SPRING_DATASOURCE_URL: jdbc:mysql://official-mysql:3306/myhipster?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+  SPRING_DATASOURCE_USERNAME: myhipster
+  SPRING_DATASOURCE_PASSWORD: myhipster
 
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
