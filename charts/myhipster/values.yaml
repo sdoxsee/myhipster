@@ -25,7 +25,6 @@ official-mysql:
   mysqlDatabase: myhipster
   mysqlUser: myhipster
   existingSecret: mysql-secret
-  
 
 # define environment variables here as a map of key: value
 env:
