@@ -8,4 +8,4 @@ dependencies:
   alias: official-mysql
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 7.0.2
-  condition: persistence.deploy
+  # condition: persistence.deploy
