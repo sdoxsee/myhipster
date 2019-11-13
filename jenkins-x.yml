@@ -9,7 +9,7 @@ pipelineConfig:
           - command: mvn -Pprod clean deploy
             dir: /workspace/source
             image: maven
-            name: build-mvn-deploy
+            name: mvn-deploy
         containerOptions:
           resources:
             limits:
@@ -22,7 +22,7 @@ pipelineConfig:
           - command: mvn -Pprod install
             dir: /workspace/source
             image: maven
-            name: build-mvn-install
+            name: mvn-install
         containerOptions:
           resources:
             limits:
