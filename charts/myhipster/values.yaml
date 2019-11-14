@@ -21,7 +21,7 @@ persistence:
 #   postgresqlPassword:
 
 official-mysql:
-#   fullnameOverride: official-mysql
+  fullnameOverride: official-mysql
   mysqlDatabase: myhipster
   mysqlUser: myhipster
   existingSecret: mysql-secret
